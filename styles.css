@@ -1,14 +1,44 @@
+/* General reset and basic styling */
 * {
   margin: 0;
   padding: 0;
-  font-family: verdana, sans-serif;
+  font-family: Verdana, sans-serif;
   box-sizing: border-box;
 }
 
-html, body {
+/* HTML and body layout */
+html {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(247.28deg, #dadada 37.32%, #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
+}
+
+body {
   width: 100%;
   height: 100%;
 }
+
+
+.poly-overlay {
+  position: fixed;  /* Use fixed positioning to make it cover the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw;     
+  height: 100vh;    
+  object-fit: cover; 
+  z-index: -1;
+ }
+
+ @media (max-width: 768px) {
+  .poly-overlay{
+    
+  }
+}
+ @media (max-width: 480px){
+   .poly-overlay {
+
+   }
+ }
 
 /* Navbar Styling */
 .navbar {
@@ -29,7 +59,6 @@ html, body {
   text-decoration: none;
 }
 
-/* Hamburger Menu */
 .hamburger {
   display: none;
   font-size: 30px;
@@ -37,6 +66,19 @@ html, body {
   border: none;
   color: white;
   cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.nav-links a {
+  font-size: 16px;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 /* Dropdown Menu */
@@ -73,34 +115,16 @@ html, body {
   display: block;
 }
 
-/* Menu Links */
-.nav-links {
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
-}
-
-.nav-links a {
-  font-size: 16px;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
 /* Image & Text Styling */
 .photo-main {
   position: absolute;
-  top: 10vh;
+  top: 14vh;
   left: 5vw;
-  height: 250px;
-  width: 250px;
-  border-radius: 40px;
-  box-shadow: 7px 9px 12px gray;
-}
-
-.poly-overlay {
-  position: absolute;
-  width: 100%;
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 7px 12px 12px rgb(104, 103, 103);
 }
 
 .header {
@@ -123,8 +147,15 @@ html, body {
 @keyframes fadeOut {
   0% { opacity: 0; }
   30% { opacity: 1; }
-  80% { opacity: .9; }
+  80% { opacity: 0.9; }
   100% { opacity: 0; }
+}
+
+@keyframes finalFade {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  80% { opacity: 0.9; }
+  100% { opacity: 1; }
 }
 
 /* Make text more responsive */
@@ -132,57 +163,103 @@ html, body {
   opacity: 0;
 }
 
+#head1 {
+  animation: fadeOut 5s ease-in;
+}
+
+#head2 {
+  animation: fadeOut 5s ease-in 6s;
+}
+
+#head3 {
+  animation: fadeOut 5s ease-in 12s;
+}
+
+#head4 {
+  animation: fadeOut 5s ease-in 17s;
+}
+
+#head5 {
+  animation: finalFade 5s ease-in 22s;
+  animation-fill-mode: forwards;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .navbar {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .navbar a {
-      padding: 10px;
-      font-size: 14px;
+    padding: 10px;
+    font-size: 14px;
   }
 
   .hamburger {
-      display: block;
+    display: block;
   }
 
   .nav-links {
-      display: none;
-      width: 100%;
-      flex-direction: column;
-      background-color: rgba(173, 173, 173, 0.8);
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(173, 173, 173, 0.8);
   }
 
   .nav-links a {
-      padding: 12px;
-      width: 100%;
-      text-align: left;
+    padding: 12px;
+    width: 100%;
+    text-align: left;
   }
 
   .nav-links.show {
-      display: flex;
+    display: flex;
+  }
+
+  .photo-main {
+    top: 12vh;
+    left: 8vw;
+    width: 150px;
+    height: 150px;
+  }
+
+  .header {
+    font-size: 1.5em;
+    top: 35%;
   }
 }
 
 @media (max-width: 480px) {
   .navbar a {
-      font-size: 12px;
-      padding: 8px;
+    font-size: 12px;
+    padding: 8px;
   }
 
   .photo-main {
-      top: 30vh;
-      left: 15vw;
-      width: 150px;
-      height: 150px;
+    top: 14vh;
+    left: 10vw;
+    width: 150px;
+    height: 150px;
   }
 
   .header {
-      font-size: 1.2em;
-      top: 30%;
+    font-size: 1.2em;
+    top: 30%;
   }
+
+  /*.poly-overlay {
+    width: 100%;
+    height: auto;
+  }*/
+}
+
+#footer {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  color: white;
+  position: fixed;
+  transform: translate(95vw, 90vh);
 }
 .light {
   position: absolute;
