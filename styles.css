@@ -189,20 +189,20 @@ body {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .header {
-    font-size: 1.8em; /* Adjust font size for medium screens (tablets) */
+    font-size: 1.8em; 
   }
 }
 
 @media (max-width: 480px) {
   .header {
-    font-size: 1.5em; /* Adjust font size for small screens (phones) */
+    font-size: 1.5em; 
   }
 }
 
-/* Optional: Adding spacing for the animation to give it a little delay */
+
 #head1, #head2, #head3, #head4, #head5 {
   margin-bottom: 10px;  
-  
+}
 /* Media Queries */
 @media (max-width: 768px) {
   .navbar {
