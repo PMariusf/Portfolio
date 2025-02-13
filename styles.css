@@ -16,13 +16,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222;
+  /*background-color: #222;*/
   padding: 15px 20px;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 /* Logo (Optional) */
@@ -141,7 +143,7 @@ body {
 /* Image & Text Styling */
 .photo-main {
   position: absolute;
-  top: 14vh;
+  top: 17vh;
   left: 5vw;
   width: 200px;
   height: 200px;
@@ -237,8 +239,6 @@ body {
     width: 150px;
     height: 150px;
   }
-
-
 
 
 #footer {
