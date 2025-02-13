@@ -157,12 +157,13 @@ body {
   position: absolute;
   width: 150px;
   height: 150px;
-  top: 20vh;
+  top: 12vh;
   left: 5vw;
   object-fit: cover;
   box-shadow: 7px 12px 12px rgb(104, 103, 103);
   margin-top: 25px;
-  transform: translateX(-20%); /* Centering image on smaller screens */
+  border-radius: 30px;
+  /*transform: translateX(-40%); /* Centering image on smaller screens */
 }
 
 
@@ -172,6 +173,12 @@ body {
   height: 120px;
   top: 22vh;
 }
+}
+@media (min-width: 760px) {
+  .photo-main {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 
