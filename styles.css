@@ -141,7 +141,7 @@ body {
 
 
 /* Image & Text Styling */
-.photo-main {
+/*.photo-main {
   position: absolute;
   top: 17vh;
   left: 5vw;
@@ -151,7 +151,27 @@ body {
   object-fit: cover;
   box-shadow: 7px 12px 12px rgb(104, 103, 103);
   margin-top: 25px;
+} */
+
+.photo-main {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  top: 20vh;
+  left: 50%;
+  transform: translateX(-50%); /* Centering image on smaller screens */
 }
+
+
+@media (max-width: 480px) {
+.photo-main {
+  width: 120px;
+  height: 120px;
+  top: 22vh;
+}
+}
+
+
 
 .header {
   position: absolute;
