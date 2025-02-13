@@ -159,6 +159,9 @@ body {
   height: 150px;
   top: 20vh;
   left: 50%;
+  object-fit: cover;
+  box-shadow: 7px 12px 12px rgb(104, 103, 103);
+  margin-top: 25px;
   transform: translateX(-20%); /* Centering image on smaller screens */
 }
 
