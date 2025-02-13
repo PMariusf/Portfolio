@@ -139,20 +139,6 @@ body {
  }
 
 
-
-/* Image & Text Styling */
-/*.photo-main {
-  position: absolute;
-  top: 17vh;
-  left: 5vw;
-  width: 200px;
-  height: 200px;
-  border-radius: 30px;
-  object-fit: cover;
-  box-shadow: 7px 12px 12px rgb(104, 103, 103);
-  margin-top: 25px;
-} */
-
 .photo-main {
   position: absolute;
   width: 150px;
@@ -270,7 +256,7 @@ body {
   font-size: 1.2em;
   color: white;
   position: fixed;
-  transform: translate(95vw, 90vh);
+ /* transform: translate(95vw, 90vh);*/
 }
 .light {
   position: absolute;
