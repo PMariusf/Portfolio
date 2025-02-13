@@ -154,12 +154,12 @@ body {
 } */
 
 .photo-main {
-  position: relative;
+  position: absolute;
   width: 150px;
   height: 150px;
   top: 20vh;
   left: 50%;
-  transform: translateX(-50%); /* Centering image on smaller screens */
+  transform: translateX(-20%); /* Centering image on smaller screens */
 }
 
 
