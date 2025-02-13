@@ -16,7 +16,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222; /* Darker for contrast */
+  background-color: #222;
   padding: 15px 20px;
   position: fixed;
   width: 100%;
@@ -25,7 +25,15 @@ body {
   z-index: 1000;
 }
 
-/* Navbar Links */
+/* Logo (Optional) */
+.logo {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Nav Links */
 .nav-links {
   display: flex;
   gap: 20px;
@@ -41,28 +49,44 @@ body {
 }
 
 .navbar a:hover {
-  color: #ffcc00; /* Highlight on hover */
+  color: #ffcc00;
 }
 
-/* Mobile Responsive */
+/* Hamburger Menu (Hidden by Default) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #f1f1f1;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
   }
 
   .nav-links {
+    display: none;
     flex-direction: column;
-    gap: 10px;
     width: 100%;
-    margin-top: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #222;
+    padding: 10px 0;
+    text-align: center;
   }
 
-  .navbar a {
+  .nav-links a {
     padding: 10px;
     font-size: 16px;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 }
 
