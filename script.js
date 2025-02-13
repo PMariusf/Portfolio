@@ -1,11 +1,14 @@
-f// Toggle the dropdown visibility
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
 function toggleDropdown() {
-    const dropdownContent = document.getElementById("myDropdown");
-    dropdownContent.classList.toggle("show");
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+document.addEventListener("click", function(event) {
+  if (!event.target.closest(".dropdown")) {
+      document.getElementById("myDropdown").classList.remove("show");
   }
-  
-  // Toggle the mobile navbar visibility when hamburger menu is clicked
-  function toggleMenu() {
-    const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("show");
+  if (!event.target.closest(".hamburger") && !event.target.closest(".nav-links")) {
+      document.getElementById("navLinks").classList.remove("show");
   }
+});
