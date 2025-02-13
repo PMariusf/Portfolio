@@ -90,10 +90,6 @@ body {
   }
 }
 
-.polygon {
-  height: 15vh; /* Increases height for mobile screens */
-}
-
 
 .light-under-navbar {
   position: absolute;
