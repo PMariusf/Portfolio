@@ -7,7 +7,7 @@
   font-family: Arial, sans-serif;
 }
 body {
-  background: linear-gradient(247.28deg, #494848 37.32%, #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
+  background: linear-gradient(247.28deg, #6b6969 37.32%, #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -28,13 +28,26 @@ body {
 }
 
 /* Logo (Optional) */
-.logo {
+/*.logo {
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
+} */
+.logo {
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-image: url('PM.png'); /* Replace with your logo */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 50px; /* Adjust to move text away from logo */
 }
-
 /* Nav Links */
 .nav-links {
   display: flex;
@@ -51,7 +64,8 @@ body {
 }
 
 .navbar a:hover {
-  color: #ffcc00;
+  color: #727277;
+  text-decoration-line: underline;
 }
 
 /* Hamburger Menu (Hidden by Default) */
