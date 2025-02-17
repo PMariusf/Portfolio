@@ -185,7 +185,7 @@ body {
 
 .header {
   position: absolute;
-  top: 70%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Roboto', sans-serif;
