@@ -154,6 +154,10 @@ body {
   width: 100%;
   height: 100%;
 }
+.poly-overlay {
+  top: calc(55px + 3px); /* Adjusted for smaller navbar */
+  height: calc(100vh - 55px - 3px); /* Stretches fully to bottom */
+}
 
 /* 📱 Mobile Adjustments */
 @media (max-width: 768px) {
