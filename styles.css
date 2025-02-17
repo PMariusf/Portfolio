@@ -302,11 +302,16 @@ body {
 
 
 #footer {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2em;
-  color: white;
   position: fixed;
- /* transform: translate(95vw, 90vh);*/
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.2em;
+  z-index: 1000;
 }
 .light {
   position: absolute;
