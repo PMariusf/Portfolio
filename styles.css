@@ -54,6 +54,7 @@ body {
   background-position: center left;
   padding-left: 50px; /* Adjust to move text away from logo */
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  
 }
 /* Nav Links */
 .nav-links {
@@ -153,6 +154,9 @@ body {
   width: 100%;
   height: 100%;
 }
+
+
+
 .poly-overlay {
   top: calc(55px + 3px); /* Adjusted for smaller navbar */
   height: calc(100vh - 55px - 3px); /* Stretches fully to bottom */
