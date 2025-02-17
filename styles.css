@@ -11,7 +11,7 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  padding-bottom: 50px;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -140,14 +140,15 @@ body {
 }
 
 .poly-overlay {
-  position: absolute;
-  top: calc(65px + 3px); /* Keeps it exactly 3px below navbar */
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  height: auto; /* Ensures it scales responsively */
-  z-index: -1;
-}
+  
+    position: fixed;
+    top: calc(65px + 3px); /* Stays exactly 3px below the navbar */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 65px - 3px); /* Fills the remaining space */
+    z-index: -1;
+  }
+
 
 .poly-overlay svg {
   width: 100%;
