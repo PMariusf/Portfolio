@@ -16,13 +16,13 @@ body {
 }
 
 .main-content {
-  flex: 1; /* Pushes polygon to the bottom */
+  flex: 1; /
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*background-color: #222;*/
+ 
   padding: 15px 20px;
   position: fixed;
   width: 100%;
