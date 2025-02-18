@@ -1,16 +1,123 @@
 * {
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background: linear-gradient(247.28deg, #6b6969 37.32%, #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; /
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+
+.logo {
+  position: relative;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-image: url('PM.png'); /* Replace with your logo */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 50px; /* Adjust to move text away from logo */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  
+}
+/* Nav Links */
+
+
+
+.navbar a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #727277;
+  text-decoration-line: underline;
+}
+
+/* Hamburger Menu (Hidden by Default) */
+
+/*
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #222;
+    padding: 10px 0;
+    text-align: center;
+  }. */
+
+  .nav-links a {
+    padding: 10px;
+    font-size: 16px;
   }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+
+.light-under-navbar {
+  position: absolute;
+  top: 65px; 
+  left: 0;
+  width: 100%; 
+  height: 5px; 
+  background-color: rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.977); 
+  z-index: -1; 
+  animation: lightPulse 2s infinite; 
+}
+
+/* Keyframe for pulsing light animation */
+@keyframes lightPulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
   /*Line-gradiant*/
 .line-2 {
   background: fixed;
@@ -200,9 +307,13 @@ height: 1073px;
   }
   
   /* Footer */
-  footer {
-    background-color: rgba(18, 18, 18, 0.8);
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9em;
-  }
+  #footer{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    position: fixed;
+    -webkit-transform: translate(95vw,90vh);
+    -moz-transform: translate(95vw,90vh);
+    transform: translate(95vw,90vh);
+    transform: translate(95vw,90vh);
+    }
