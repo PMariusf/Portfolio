@@ -414,7 +414,7 @@ text-align: center;
   #github,
   #facebook {
     position:relative;
-    font-size: 6vw;
+    font-size: 8vw;
     background-color: #2e2e33;
     color: #fff;
     box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
@@ -443,6 +443,12 @@ text-align: center;
     animation-delay: 0.5s;
   }
   
+  @media screen and (max-width: 768px) {
+    .container {
+        flex-direction: row; /* Stack icons vertically */
+        align-items: center;
+      }
+    }
   
   @keyframes animate {
     from {
