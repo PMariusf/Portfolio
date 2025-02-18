@@ -163,11 +163,22 @@ body {
 }
 
 /* 📱 Mobile Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 668px) {
   .poly-overlay {
     top: calc(55px + 3px); /* Adjust based on smaller navbar height */
   bottom: 0;
   }
+}
+
+
+
+.bottom-right-image {
+  position: fixed;
+  bottom: 10px;  /* Adjust distance from the bottom */
+  right: 10px;   /* Adjust distance from the right */
+  width: 30px;  /* Adjust the image width */
+  height: auto;  /* Maintain aspect ratio */
+  z-index: 999;  /* Ensure it's on top of other content */
 }
 /*
 .poly-overlay {

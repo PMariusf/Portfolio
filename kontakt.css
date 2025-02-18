@@ -229,6 +229,55 @@ text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
+/* Social Media Icons */
+#instagram {
+  font-size: 5vw;
+  background-color: #E4405F; /* Instagram Red-Pink */
+  color: white;
+  text-shadow: 0 0 10px #ff5c8d, 0 0 20px #ff5c8d;
+}
+
+#linkedin {
+  font-size: 5vw;
+  background-color: #0077b5; /* LinkedIn Blue */
+  color: white;
+  text-shadow: 0 0 10px #0099ff, 0 0 20px #0099ff;
+}
+
+#twitch {
+  font-size: 5vw;
+  background-color: #6441A5; /* Twitch Purple */
+  color: white;
+  text-shadow: 0 0 10px #8d5cff, 0 0 20px #8d5cff;
+}
+
+#github {
+  font-size: 5vw;
+  background-color: #333; /* GitHub Dark */
+  color: white;
+  text-shadow: 0 0 10px #999, 0 0 20px #999;
+}
+
+#facebook {
+  font-size: 5vw;
+  background-color: #1877F2; /* Facebook Blue */
+  color: white;
+  text-shadow: 0 0 10px #4c8bf5, 0 0 20px #4c8bf5;
+}
+
+/* Hover Effect - Slight Glow */
+#instagram:hover,
+#linkedin:hover,
+#twitch:hover,
+#github:hover,
+#facebook:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2); /* Increase brightness on hover */
+}
+
+
+
+
   #instagram,
   #linkedin,
   #twitch, 
@@ -236,7 +285,7 @@ text-align: center;
   #facebook {
     position:relative;
     font-size: 8vw;
-    background-color: #2e2e33;
+    background-color: #4b4b4b;
     color: #fff;
     box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
       2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
@@ -251,7 +300,7 @@ text-align: center;
     transform: scale(1.1);
     
  
-    transform: scale(1.1);
+    
 
       
   }
