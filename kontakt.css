@@ -398,19 +398,23 @@ text-align: center;
       }
    
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-   
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; 
+      gap: 20px; 
+      padding: 20px;
   }
+   
+  
   #instagram,
   #linkedin,
   #twitch,
   #github,
   #facebook {
     position:relative;
-    font-size: 6em;
+    font-size: 6vw;
     background-color: #2e2e33;
     color: #fff;
     box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
