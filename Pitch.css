@@ -10,83 +10,6 @@ body {
   background-position: center;
   height: 100vh;
 }
-p.grove{
-  
-    font-size: large;
-    font-family: Georgia, 'Times New Roman', Times, serif ;
-    border-radius: 20px;
-    border-style: groove 5px;
-    text-align:center ;
-    position:fixed;
-    top: 500px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 60px;
-    line-height: 1.7;
-    display:block;
-    
-   
-    
-}
-/*Line-gradiant*/
-.line-2 {
-  background: fixed;
-  background-size: cover;
- background: linear-gradient(247.28deg,
- #dadada 37.32%,
- #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
- opacity: 0.5;
-position:fixed;
-
-width: 100%;
-height: 1073px;
-
-}
-.line-1{
-  background: fixed;
-  background-size: cover;
-  background: linear-gradient(147.28deg,
-  #dadada 37.32%,
-  #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
-  opacity: 0.6;
-  position:fixed;
-  width: 100%;
-  height: 1073px
-}
-.line-3{
-  background: fixed;
-  background-size: cover;
-  background: linear-gradient(197.28deg,
-  #dadada 37.32%,
-  #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
-  opacity: 0.4;
-  position:fixed;
-  width: 100%;
-  height: 1073px
-}
-.line-4{
-  background: fixed;
-  background-size: cover;
-  background: linear-gradient(117.28deg,
-  #dadada 37.32%,
-  #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
-  opacity: 0.7;
-  position:fixed;
-  width: 100%;
-  height: 1073px
-}
-.line-5{
-  background: fixed;
-  background-size: cover;
-  background: linear-gradient(197.28deg,
-  #dadada 37.32%,
-  #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
-  opacity: 0.4;
-  position:fixed;
-  width: 100%;
-  height: 1073px
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -198,6 +121,84 @@ height: 1073px;
     opacity: 0.6;
   }
 }
+p.grove{
+  
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    border-radius: 20px;
+    border-style: groove 5px;
+    text-align:center ;
+    position:fixed;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px;
+    line-height: 1.7;
+    display:block;
+    
+   
+    
+}
+/*Line-gradiant*/
+.line-2 {
+  background: fixed;
+  background-size: cover;
+ background: linear-gradient(247.28deg,
+ #dadada 37.32%,
+ #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
+ opacity: 0.5;
+position:fixed;
+
+width: 100%;
+height: 1073px;
+
+}
+.line-1{
+  background: fixed;
+  background-size: cover;
+  background: linear-gradient(147.28deg,
+  #dadada 37.32%,
+  #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
+  opacity: 0.6;
+  position:fixed;
+  width: 100%;
+  height: 1073px
+}
+.line-3{
+  background: fixed;
+  background-size: cover;
+  background: linear-gradient(197.28deg,
+  #dadada 37.32%,
+  #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
+  opacity: 0.4;
+  position:fixed;
+  width: 100%;
+  height: 1073px
+}
+.line-4{
+  background: fixed;
+  background-size: cover;
+  background: linear-gradient(117.28deg,
+  #dadada 37.32%,
+  #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
+  opacity: 0.7;
+  position:fixed;
+  width: 100%;
+  height: 1073px
+}
+.line-5{
+  background: fixed;
+  background-size: cover;
+  background: linear-gradient(197.28deg,
+  #dadada 37.32%,
+  #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
+  opacity: 0.4;
+  position:fixed;
+  width: 100%;
+  height: 1073px
+}
+
+
 
 .poly-overlay {
   position: relative; 
