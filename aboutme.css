@@ -18,7 +18,7 @@ body {
 .main-content {
   flex: 1; /
 }
-  
+  /*
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -34,7 +34,7 @@ body {
     backdrop-filter: blur(8px);
   }
   
-  
+  */
   .logo {
     position: relative;
     font-size: 26px;
@@ -53,46 +53,80 @@ body {
   }
   /* Nav Links */
   
-  
-  
-  .navbar a {
-    color: #f1f1f1;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 8px 12px;
-    transition: color 0.3s ease-in-out;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
   }
   
-  .navbar a:hover {
-    color: #727277;
-    text-decoration-line: underline;
-  }
 
-/* Hamburger Menu (Hidden by Default) */
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2.5em;
+}
 
-/*
-  .nav-links {
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s;
+  padding: 0.5em;
+}
+
+.navbar a:hover {
+  color: rgb(85, 0, 255);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 668px) {
+  .navbar ul {
     display: none;
     flex-direction: column;
     width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #222;
-    padding: 10px 0;
+    gap: 1.5em;
     text-align: center;
-  }. */
-
-  .nav-links a {
-    padding: 10px;
-    font-size: 16px;
   }
 
-  .nav-links.show {
+  .navbar ul.active {
     display: flex;
   }
 
+  .menu-toggle {
+    display: flex;
+  }
+}
+  
 
 .light-under-navbar {
   position: absolute;
@@ -259,31 +293,7 @@ height: 1073px;
     cursor: pointer;
   }
   */
-  .menu-toggle div {
-    width: 30px;
-    height: 3px;
-    background-color: #ffffff;
-    margin: 5px 0;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 568px) {
-    .navbar ul {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      gap: 1.5em;
-      text-align: center;
-    }
-  
-    .navbar ul.active {
-      display: flex;
-    }
-  
-    .menu-toggle {
-      display: flex;
-    }
-  }
+ 
   
   /* Headline Styling */
   .Headline {
