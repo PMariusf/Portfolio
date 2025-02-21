@@ -106,6 +106,39 @@ body {
   
 }
 
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+
+.logo {
+  position: relative;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-image: url('PM.png'); /* Replace with your logo */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 50px; /* Adjust to move text away from logo */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  
+}
 .clear {
   clear: both;
 }
@@ -491,7 +524,7 @@ nav{
     
     mix-blend-mode: normal;
       text-shadow: 3px 3px 5px rgb(83, 82, 82);
-    opacity: 0.7;
+    opacity: 0.8;
     background: radial-gradient(50% 50% at 50% 50%,
     #a7a6a6 18.23%, rgba(209, 206, 206, 0) 100%);
     display: flex;
@@ -500,6 +533,7 @@ nav{
     min-height: 10vh;
     background-color: #959595;
     font-family: 'Poppins', sans-serif;
+    
    
   }
   nav ul li a{

@@ -53,6 +53,79 @@ body {
 /* Nav Links */
 
 
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2.5em;
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s;
+  padding: 0.5em;
+}
+
+.navbar a:hover {
+  color: rgb(85, 0, 255);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 668px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5em;
+    text-align: center;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/*
+.nav-links {
+ 
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background 
+  text-align: center;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
 
 .navbar a {
   color: #f1f1f1;
@@ -61,6 +134,7 @@ body {
   font-weight: 600;
   padding: 8px 12px;
   transition: color 0.3s ease-in-out;
+  dipslay: block;
 }
 
 .navbar a:hover {
@@ -70,28 +144,51 @@ body {
 
 /* Hamburger Menu (Hidden by Default) */
 
+
+
+ 
 /*
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #222;
-    padding: 10px 0;
-    text-align: center;
-  }. */
-
-  .nav-links a {
-    padding: 10px;
-    font-size: 16px;
-  }
-
   .nav-links.show {
     display: flex;
   }
 
+  @media (min-width: 768px) {
+    .nav-links {
+      display: flex;
+      position: row;
+      flex-direction: row;
+      background: none;
+      width: auto;
+    }
+    .nav-links a {
+      padding: 10 15px;
+      font-size: 16px;
+      display: block;
+      color: white;
+    }
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+  }
+  
+  /* 
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+  } */
+  
 
 .light-under-navbar {
   position: absolute;

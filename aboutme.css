@@ -18,55 +18,56 @@ body {
 .main-content {
   flex: 1; /
 }
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
- 
-  padding: 15px 20px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-}
-
-
-.logo {
-  position: relative;
-  font-size: 26px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  background-image: url('PM.png'); /* Replace with your logo */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center left;
-  padding-left: 50px; /* Adjust to move text away from logo */
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
   
-}
-/* Nav Links */
-
-
-
-.navbar a {
-  color: #f1f1f1;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 8px 12px;
-  transition: color 0.3s ease-in-out;
-}
-
-.navbar a:hover {
-  color: #727277;
-  text-decoration-line: underline;
-}
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+  }
+  
+  
+  .logo {
+    position: relative;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-image: url('PM.png'); /* Replace with your logo */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 50px; /* Adjust to move text away from logo */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    
+  }
+  /* Nav Links */
+  
+  
+  
+  .navbar a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar a:hover {
+    color: #727277;
+    text-decoration-line: underline;
+  }
 
 /* Hamburger Menu (Hidden by Default) */
 
@@ -118,6 +119,36 @@ body {
   }
 }
 
+.poly-overlay {
+  
+    position: fixed;
+    top: calc(65px + 3px); /* Stays exactly 3px below the navbar */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 65px - 3px); /* Fills the remaining space */
+    z-index: -1;
+  }
+
+
+.poly-overlay svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.poly-overlay {
+  top: calc(55px + 3px); /* Adjusted for smaller navbar */
+  height: calc(100vh - 55px - 3px); /* Stretches fully to bottom */
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 668px) {
+  .poly-overlay {
+    top: calc(55px + 3px); /* Adjust based on smaller navbar height */
+  bottom: 0;
+  }
+}
   /*Line-gradiant*/
 .line-2 {
   background: fixed;
@@ -178,7 +209,7 @@ height: 1073px;
 }
 
 
-  
+  /*
   .navbar {
     display: flex;
     align-items: center; 
@@ -227,7 +258,7 @@ height: 1073px;
     flex-direction: column;
     cursor: pointer;
   }
-  
+  */
   .menu-toggle div {
     width: 30px;
     height: 3px;
