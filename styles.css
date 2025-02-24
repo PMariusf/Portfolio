@@ -112,95 +112,9 @@ body {
 }
 
 /*
-.nav-links {
- 
-  flex-direction: column;
-  width: 100%;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background 
-  text-align: center;
-  padding: 10px 0;
-  transition: all 0.3s ease-in-out;
-}
-
-
-.navbar a {
-  color: #f1f1f1;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 8px 12px;
-  transition: color 0.3s ease-in-out;
-  dipslay: block;
-}
-
-.navbar a:hover {
-  color: #727277;
-  text-decoration-line: underline;
-}
-
-/* Hamburger Menu (Hidden by Default) */
-
-
-
- 
-/*
-  .nav-links.show {
-    display: flex;
-  }
-
-  @media (min-width: 768px) {
-    .nav-links {
-      display: flex;
-      position: row;
-      flex-direction: row;
-      background: none;
-      width: auto;
-    }
-    .nav-links a {
-      padding: 10 15px;
-      font-size: 16px;
-      display: block;
-      color: white;
-    }
-  }
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-  }
-  
-  .hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    transition: 0.3s;
-  }
-  
-  /* 
-  @media (min-width: 768px) {
-    .hamburger {
-      display: none;
-    }
-  } */
   
 
-.light-under-navbar {
-  position: absolute;
-  top: 65px; 
-  left: 0;
-  width: 100%; 
-  height: 5px; 
-  background-color: rgba(255, 255, 255, 0.3); 
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.977); 
-  z-index: -1; 
-  animation: lightPulse 2s infinite; 
-}
+
 
 /* Keyframe for pulsing light animation */
 @keyframes lightPulse {
