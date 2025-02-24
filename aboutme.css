@@ -1,4 +1,3 @@
-/* General Reset & Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +24,7 @@ main {
 
 /* Navbar Styling */
 .navbar {
+  padding: 20px px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,16 +39,18 @@ main {
 }
 
 .logo {
+  position: relative;
   font-size: 26px;
   font-weight: bold;
   color: white;
   text-decoration: none;
-  background-image: url('PM.png');
-  background-size: contain;
+  background-image: url('/Bilder/PM.png');
+  background-size: 60px;
   background-repeat: no-repeat;
   background-position: center left;
-  padding-left: 50px;
+  padding-left: 15px;
   text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+  line-height: 55px;
 }
 
 .navbar ul {
