@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
+  flex-wrap: nowrap;
   padding: 15px 20px;
   position: fixed;
   width: 100%;
@@ -35,6 +35,11 @@ body {
   backdrop-filter: blur(8px);
 }
 
+.logo, 
+.navbar ul, 
+.navbar a {
+  white-space: nowrap;
+}
 
 .logo {
   position: relative;
