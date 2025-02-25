@@ -24,11 +24,12 @@ main {
 
 /* Navbar Styling */
 .navbar {
-  padding: 20px px;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 0 20px;
+  height: 80px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -36,6 +37,12 @@ main {
   z-index: 1000;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(8px);
+}
+
+.logo, 
+.navbar ul, 
+.navbar a {
+  white-space: nowrap;
 }
 
 .logo {
@@ -50,26 +57,65 @@ main {
   background-position: center left;
   padding-left: 15px;
   text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
-  line-height: 55px;
+  line-height: 80px;
 }
 
+
+
+.polygon {
+  position: absolute;
+  top: calc(60px + 3px); /* Navbar height + 3px */
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 60px - 3px); /* Full page minus navbar */
+  background-color: #0088cc;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: -1;
+}
+
+/*.test area */
+@media (max-width: 668px) {
+  .navbar {
+    height: 80px;
+  }
+
+  .polygon {
+    top: calc(80px + 3px);
+    height: calc(100vh - 80px - 3px);
+  }
+}
 .navbar ul {
-  list-style: none;
   display: flex;
-  gap: 2.5em;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2em;
+}
+
+
+.navbar ul.active {
+  display: flex;
+}
+
+.navbar li {
+  width: auto;
+  text-align: right;
+  padding-right: 20px;
 }
 
 .navbar a {
-  color: white;
-  font-weight: bold;
   text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
   transition: color 0.3s;
+  padding: 0.5em;
 }
 
 .navbar a:hover {
   color: rgb(85, 0, 255);
 }
-
 
 .menu-toggle {
   display: none;
@@ -102,30 +148,6 @@ main {
     display: flex;
   }
 }
-
-.polygon {
-  position: absolute;
-  top: calc(60px + 3px); /* Navbar height + 3px */
-  left: 0;
-  width: 100vw;
-  height: calc(100vh - 60px - 3px); /* Full page minus navbar */
-  background-color: #0088cc;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  z-index: -1;
-}
-
-/*.test area */
-@media (max-width: 668px) {
-  .navbar {
-    height: 50px;
-  }
-
-  .polygon {
-    top: calc(50px + 3px);
-    height: calc(100vh - 50px - 3px);
-  }
-}
-
 
 
 

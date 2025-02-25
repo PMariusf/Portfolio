@@ -23,7 +23,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
+  flex-wrap: nowrap;
   padding: 15px 20px;
   position: fixed;
   width: 100%;
@@ -34,7 +34,11 @@ body {
   backdrop-filter: blur(8px);
   }
 
-
+  .logo, 
+  .navbar ul, 
+  .navbar a {
+    white-space: nowrap;
+  }
 
 .logo {
   position: relative;
@@ -203,7 +207,7 @@ body {
 
 .bottom-right-image {
   position: fixed;
-  bottom: 10px;  
+  bottom: 50px;  
   right: 10px;   
   width: 30px;  
   height: auto;  
@@ -323,7 +327,7 @@ body {
 
 .button-container {
   position: fixed;
-  top: 60%;           /* vertically centered */
+  top: 55%;           /* vertically centered */
   left: 5%;           /* adjust this value to move it further right if needed */
   transform: translateY(-50%);
   z-index: 900;       /* below the navbar (which uses z-index: 1000) */
@@ -376,17 +380,56 @@ body {
 /* Dropdown*/
 
 #footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 1.2em;
-  z-index: 1000;
-}
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-right: 5px;
+    margin-top: auto;
+    background: rgba(125, 124, 124, 0.7);  
+    color: #fff;                  
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    z-index: 1000;    
+    font-family: 'Roboto', sans-serif;            
+    box-shadow: 0 -3px 6px rgba(0,0,0,0.3); 
+  } 
+  
+  /* Flex container to arrange the icons side by side */
+  .contact-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style for each contact link */
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  /* Space between SVG and text */
+  .contact-link svg {
+    margin-right: 8px;
+    transition: stroke 0.3s;
+  }
+  
+  /* Hover effect */
+  .contact-link:hover {
+    color: #2575fc;
+  }
+  
+  .contact-link:hover svg {
+    stroke: #2575fc;
+  }
+
+
 .light {
   position: absolute;
   width: 0px;
@@ -689,7 +732,7 @@ to{opacity: 1;}
 80%{opacity: .9;}
 100%{opacity: 1;}
 }
-
+/*
 #footer{
 font-family: 'Roboto', sans-serif;
 font-size: 1.2em;
