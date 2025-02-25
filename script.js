@@ -34,3 +34,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+document.addEventListener('click', function (e) {
+  
+  const navMenu = document.querySelector('.navbar ul');
+  const menuToggle = document.querySelector('.menu-toggle');
+
+  
+  if (
+    navMenu.classList.contains('active') &&
+    !navMenu.contains(e.target) &&
+    !menuToggle.contains(e.target)
+  ) {
+    navMenu.classList.remove('active');
+  }
+});
