@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
-
+//responding meny if pressed outside //
 document.addEventListener('click', function (e) {
   
   const navMenu = document.querySelector('.navbar ul');
@@ -49,3 +49,45 @@ document.addEventListener('click', function (e) {
     navMenu.classList.remove('active');
   }
 });
+
+const originalContainer = document.getElementById('stacked-container');
+
+// For each image, add a click listener to toggle the expanded state
+document.querySelectorAll('.stacked-images .image').forEach(img => {
+  img.addEventListener('click', function() {
+    if (!this.classList.contains('expanded')) {
+      // Expand: remove image from its container and append to body
+      this.classList.add('expanded');
+      document.body.appendChild(this);
+    } else {
+      // Collapse: remove expanded state and return image to original container
+      this.classList.remove('expanded');
+      originalContainer.appendChild(this);
+    }
+  });
+});
+
+//const modal = document.getElementById("modal");
+//const modalImg = document.getElementById("modal-img");
+//const closeBtn = document.querySelector(".modal .close");
+
+// Attach click event to all images within the stacked-images container
+//document.querySelectorAll(".stacked-images .image").forEach(img => {//
+ // img.addEventListener("click", function() {
+  //  modal.style.display = "flex"; // Show modal as a flex container
+    //modalImg.src = this.src;
+   // modalImg.alt = this.alt;
+ // });
+//});
+
+// Close modal when the close button is clicked
+//closeBtn.addEventListener("click", function() {//
+ // modal.style.display = "none";
+//});
+
+// Close modal when clicking outside the image
+//modal.addEventListener("click", function(e) {
+  //if (e.target === modal) {
+  //  modal.style.display = "none";
+// }
+//})

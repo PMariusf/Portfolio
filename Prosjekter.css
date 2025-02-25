@@ -10,13 +10,14 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 .main-content {
   flex: 1; /
 }
@@ -221,7 +222,7 @@ height: 1073px
 
 /* Hover Effects */
 .img img:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 /* Responsive Images */
@@ -234,13 +235,13 @@ height: 1073px
       /**/
 
       .image-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+       
+       position: relative;
+       margin: 50px auto;
+       
         display: flex;
         justify-content: center;
-        align-items: center;
+       
     }
     
     /* Image Stack */
@@ -248,39 +249,106 @@ height: 1073px
         position: relative;
         width: 300px; /* Adjust width */
         height: 500px; /* Adjust height */
+        overflow: visible;
     }
     
     /* Base Image Styling */
     .image {
-        position: absolute;
+        position: fixed;
         width: 250px; 
-        height: auto;
-        transition: transform 0.3s ease;
+        height:250px;
+        object-fit: cover;
+        transition: transform 0.3s ease, z-index 0.3s ease;
+        cursor: pointer;
+        overflow:hidden;
     }
     
     /* Positioning Each Image */
-    .img1 { top: 90px; left: 10%; z-index: 5; }
-    .img2 { top: 30px; left: 30%; z-index: 4; }
-    .img3 { top: 80px; left: 50%; z-index: 3; }
-    .img4 { top: 120px; left: 70%; z-index: 2; }
-    .img5 { top: 179px; left: 90%; z-index: 1; }
+    .img1 { top: 460px; left: 50%; z-index: 5; }
+    .img2 { top: 320px; left: 30%; z-index: 4; }
+    .img3 { top: 280px; left: 50%; z-index: 3; }
+    .img4 { top: 230px; left: 50%; z-index: 2; }
+    .img5 { top: 280px; left: 65%; z-index: 1; }
     
     /* Hover Effect */
     .image:hover {
         transform: scale(1.1);
     }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-        .image {
-            width: 220px; /* Smaller images for mobile */
-        }
-        .img1 { left: 0%; }
-        .img2 { left: 15%; }
-        .img3 { left: 30%; }
-        .img4 { left: 45%; }
-        .img5 { left: 60%; }
+    .expanded {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(2);
+      z-index: 2000;
     }
+    .image.expanded {
+      transform: scale(2);
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(2);
+      z-index: 2000;
+    }
+    @media (max-width: 768px) {
+      .stacked-images {
+        width: 90%;
+        height: 60vh;
+        
+      }
+      .image {
+        width: 150px !important;
+        height: 150px !important;
+        z-index: 1;
+      }
+      .expanded {
+        transform: translate(-50%, -50%) scale(1.5);
+      }
+      .stacked-images .image:not(.expanded) {
+        left: 50% !important;
+        transform: translateX(-50%);
+      }
+      .img1 { top: 60%; left: 30%; }
+      .img2 { top: 50%; left: 30%; }
+      .img3 { top: 10%; left: 85%; }
+      .img4 { top: 55%; left: 20%; }
+      .img5 { top: 80%; left: 70%; }
+      
+    }
+    
+
+    .modal {
+      display: none;              
+      position: fixed;
+      z-index: 9999;             
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8); 
+      justify-content: center;
+      align-items: center;
+    }
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      animation: zoom 0.3s;
+    }
+    @keyframes zoom {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    /* Close button styling */
+    .modal .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+    }
+    /* Responsive */
+  
+    
 
 
 
