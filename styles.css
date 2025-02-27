@@ -109,7 +109,7 @@ body {
 }
 
 .navbar a:hover {
-  color: rgb(85, 0, 255);
+  color: rgb(81, 0, 243);
 }
 
 .menu-toggle {
@@ -394,6 +394,8 @@ alternativ option
 }
 
 .dropdown-content {
+  border: 2px solid #5e5e5e;
+  border-radius: 5px;
   display: none;
   position: absolute;
   top: 110%; 
