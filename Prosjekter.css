@@ -258,8 +258,8 @@ height: 1073px
     /* Base Image Styling */
     .image {
         position: absolute;
-        width: 250px; 
-        height:250px;
+        width: 170px; 
+        height:170px;
         object-fit: cover;
         transition: transform 0.3s ease, z-index 0.3s ease;
         cursor: pointer;
@@ -267,7 +267,7 @@ height: 1073px
     }
     
     /* Positioning Each Image */
-    .img1 { top: 460px; left: 50%; z-index: 5; }
+    .img1 { top: 420px; right: 5%; z-index: 5; }
     .img2 { top: 320px; left: 30%; z-index: 4; }
     .img3 { top: 280px; left: 50%; z-index: 3; }
     .img4 { top: 230px; left: 50%; z-index: 2; }
@@ -319,215 +319,10 @@ height: 1073px
       
     }*/
     
-
-    .modal {
-      display: none;              
-      position: fixed;
-      z-index: 9999;             
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0,0,0,0.8); 
-      justify-content: center;
-      align-items: center;
-    }
-    .modal img {
-      max-width: 90%;
-      max-height: 90%;
-      animation: zoom 0.3s;
-    }
-    @keyframes zoom {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-    /* Close button styling */
-    .modal .close {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 2rem;
-      color: #fff;
-      cursor: pointer;
-    }
-    /* Responsive */
-  
-    
-
-
-
-      /*
-.img-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; 
-  width: 100%;
-  max-width: 800px; 
-  margin: 100px auto; 
-}
-
-/* Image Styling */
-/*.img-container img {
-  width: 180px; 
-  height: auto;
-  position: absolute;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Positioning Images in Overlapping Stacked Layout */
-/*.image1 {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 6;
-}
-.image2 {
-  top: 30px;
-  left: 55%;
-  transform: translateX(-50%);
-  z-index: 5;
-}
-.image3 {
-  top: 60px;
-  left: 60%;
-  transform: translateX(-50%);
-  z-index: 4;
-}
-.image4 {
-  top: 90px;
-  left: 65%;
-  transform: translateX(-50%);
-  z-index: 3;
-}
-.image5 {
-  top: 120px;
-  left: 70%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-.image6 {
-  top: 150px;
-  left: 75%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-/* Hover Effect: Slight Enlargement */
-/*.img-container img:hover {
-  transform: translateX(-50%) scale(1.1);
-  opacity: 0.9;
-}
-
-/* Responsive Adjustments */
-/*@media (max-width: 768px) {
-  .img-container img {
-    width: 120px; /* Reduce size on small screens */
- /* }
-
-  /* Adjust stacking positions for smaller screens */
-  /*.image1 { top: 0; left: 50%; }
-  .image2 { top: 20px; left: 52%; }
-  .image3 { top: 40px; left: 54%; }
-  .image4 { top: 60px; left: 56%; }
-  .image5 { top: 80px; left: 58%; }
-  .image6 { top: 100px; left: 60%; }
-}
-      
-      
-   /*  text area*
-
-      .text{
-       padding: 10px;
-       margin: 10px;
-
-      }
-
-     
-      #img{
-        position: relative;
-        display: flex;
-        align-items: center;
-        max-inline-size: 100%;
-  
-        
-        
-      }
-     .img{
-        position: absolute;
-        display: flex ;
-        align-items: center;
-        top: 270px;
-        left: 530px;
-        max-inline-size: 100%;
-  
-     }
-
-     .image1{
-        position: absolute;
-        top: 50px;
-        left: 455px;
-        position: relative;
-     }
-
-     .img:hover .faded {
-      opacity: 0.8;
-    }
-     .image1:hover{
-      width: 100px;
-     }
-    .image2:hover{
-      width: 100px;
-    }
-    .image3:hover{
-      width: 100px;
-    }
-    .image4:hover{
-      width: 100px;
-    }
-    .image5:hover{
-      width: 100px;
-    }
-    .image6:hover{
-      width: 100px;
-    }
-    .image2{
-       position: absolute;
-       top: 1px;
-       left: 545px;
-    }
-    .image3{
-       position: absolute;
-       top: 1px;
-       left: 360px;
-
-    }
-    .image4{
-       position: absolute;
-       top: 50px;
-       left: 270px;
-   
-    }
-    .image5{
-        position: absolute;
-        top: 50px;
-        left: 100px;
-     }
-     .image6{
-        position: absolute;
-        top: 1px;
-        left: 180px;
-     } 
-     
-     /* test*/
-
-/* Navbar and feature */
-
-
+/*
 /*test area*/
 .light {
-position: absolute;
+position: fixed;
 width: 0px;
 opacity: .75;
 background-color: rgb(185, 183, 183);
@@ -538,6 +333,7 @@ bottom: 0px;
 left: 0px;
 right: 0px;
 margin: auto;
+z-index: 100;
 }
 
 .x1{
@@ -679,7 +475,7 @@ outline: none;
 75%{opacity: 1;}
 100%{top: -100vh; opacity: 0;}
 }
-/*
+
 .header{
 
 position: absolute;
