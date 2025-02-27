@@ -128,12 +128,47 @@ body {
 @media (max-width: 668px) {
   .navbar ul {
     display: none;
+    position: absolute;
+    top: 100%;        
+    right: 0;         
+    
+    width: auto;       
+    height: auto;
+    
+    /* Appearance & spacing */
+    background: transparent;
+    background: rgba(164, 164, 164, 0.7);
+    border: 2px solid #fff;
+    border-radius: 5px;
     flex-direction: column;
-    width: 100%;
-    gap: 1.5em;
-    text-align: center;
+    gap: 1em;          
+    margin: 0;
+    padding: 10px;     
+    text-align: right;
+/*
+
+alternativ option
+    display: none;
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    
+    height: 50vh; 
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+    /*
+   
   }
 
+  .navbar ul li:last-child {
+    margin-bottom: 15px; /* Adjust value as needed */
+  }
   .navbar ul.active {
     display: flex;
   }
