@@ -9,10 +9,13 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  
-  min-height: 100vh;
+  margin: 0;
+  align-items: center;
+      justify-content: center;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+
 }
 
 .main-content {
@@ -286,15 +289,22 @@ text-align: center;
     font-size: 8vw;
     background-color: #4b4b4b;
     color: #fff;
-    box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
-      2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
-      inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
-      inset 2px 2px 10px #00000080;
+    box-shadow: 
+      2px 2px 2px #00000080, 
+      10px 1px 12px #00000080,
+      2px 2px 10px #00000080, 
+      2px 2px 3px #00000080,
+       inset 2px 2px 10px #00000080,
+       inset 2px 2px 10px #00000080, 
+       inset 2px 2px 10px #00000080,
+       inset 2px 2px 10px #00000080;
     border-radius: 29px;
     padding: 9px 19px;
     margin: 0 30px;
     animation: animate 3s linear infinite;
-    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+    text-shadow: 0 0 50px #0072ff,
+      0 0 100px #0072ff,
+      0 0 150px #0072ff,
       0 0 200px #0072ff;
     transform: scale(1.1);
     
@@ -319,12 +329,19 @@ text-align: center;
   @media screen and (max-width: 728px) {
     .container {
         flex-direction:row; /* Stack icons vertically */
-        align-items: center; /* Keep them centered */
+        align-items:flex-end; /* Keep them centered */
         justify-content: center;
         gap: 10px; /* Reduce spacing */
     }
   }
-
+  #instagram,
+  #linkedin,
+  #twitch,
+  #github,
+  #facebook {
+    font-size: 6vw; /* Adjust this value to get your desired icon size on small screens */
+    margin: 0 15px;
+  }
     .icon-wrapper {
         margin: 2px 0; /* Reduce spacing between icons */
     }
@@ -341,6 +358,33 @@ text-align: center;
     }
   }
 
+/*test*/
+
+.container {
+  text-align: center;
+}
+/* Glowing Square */
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #00ffff; /* Cyan */
+  box-shadow: 0 0 15px 5px #00ffff, 0 0 30px 10px #00ffff;
+  display: inline-block;
+  margin: 20px;
+}
+/* Glowing Triangle */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 120px solid #ff00ff; /* Magenta */
+  box-shadow: 0 0 15px 5px #ff00ff, 0 0 30px 10px #ff00ff;
+  display: inline-block;
+  margin: 20px;
+}
+
+/*Test*/
       .light {
         position: absolute;
         width: 0px;
