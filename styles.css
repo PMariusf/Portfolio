@@ -67,7 +67,8 @@ body {
     right: 0;               
     width: 100%;             
     height: calc(100vh - 65px); 
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent;
+    background: rgba(105, 104, 104, 0.7);
     border: 2px solid #fff;  
     border-radius: 5px;      
     flex-direction: column;
