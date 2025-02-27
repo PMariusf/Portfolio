@@ -162,12 +162,13 @@ alternativ option
     align-items: flex-end;
     margin: 0;
     padding: 0;
-    /*
+    /**/
    
   }
 
   .navbar ul li:last-child {
-    margin-bottom: 15px; /* Adjust value as needed */
+    background: transparent;
+    margin-bottom: 20px; /* Adjust value as needed */
   }
   .navbar ul.active {
     display: flex;
