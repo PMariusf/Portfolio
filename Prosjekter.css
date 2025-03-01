@@ -33,7 +33,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 10px 15px;
+  padding: 15px 15px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -48,7 +48,9 @@ body {
 .navbar a {
   white-space: nowrap;
 }
-
+.navbar a {
+  font-size: 1.2em;
+}
 .logo {
   position: relative;
   font-size: 26px;
@@ -141,8 +143,6 @@ width: 100%;
 height: 100%;
 }
 
-
-
 .poly-overlay {
 top: calc(55px + 3px); /* Adjusted for smaller navbar */
 height: calc(100vh - 55px - 3px); /* Stretches fully to bottom */
@@ -171,24 +171,41 @@ bottom: 0;
   background: linear-gradient(247.28deg, #dadada 37.32%, #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
   opacity: 0.5;
 }
-
-/* Image Gallery */ /*
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 80px;
+.light-stripe {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.5;
+  animation: moveLight 4s linear infinite;
 }
 
-.image-gallery img {
-  width: 150px;
-  transition: transform 0.3s;
+/* Light Stripe Positions */
+.stripe1 {
+  top: 30%;
+  left: 0;
 }
 
-.image-gallery img:hover {
-  transform: scale(1.1);
+.stripe2 {
+  top: 70%;
+  left: 0;
 }
+
+/* Animation for Moving Effect */
+@keyframes moveLight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
 /*. */
 /* Background Light Strobes */
 .light {
@@ -247,8 +264,8 @@ height: 1073px
 
 .stacked {
   position: absolute;
-  width: 90px; /* Adjust width */
-  height: 300px; /* Adjust height */
+  width: 100px; /* Adjust width */
+  height: 400px; /* Adjust height */
   object-fit: cover;
   transition: transform 0.3s ease, z-index 0.3s ease;
   cursor: pointer;
@@ -276,97 +293,16 @@ height: 1073px
 
   .stacked {
     width: 90px;
-    height: 290px;
+    height: 390px;
   }
 
-  .img1 { left: -5px; }
-  .img2 { left: 25px; }
+  .img1 { left: -50px; }
+  .img2 { left: 0px; }
   .img3 { left: 55px; }
-  .img4 { left: 90px; }
-  .img5 { left: 115px; }
+  .img4 { left: 105px; }
+  .img5 { left: 145px; }
 }
 
-/*
-      .image-container {
-        position: relative;
-        margin: 50px auto;
-        display: flex;
-        justify-content: center;
-      }
-      
-      
-      .stacked-images {
-        position: relative;
-        width: 300px; 
-        height: 500px; 
-        overflow: visible;
-      }
-      
-     
-      .image {
-        position: absolute;
-        width: 170px;
-        height: 170px;
-        object-fit: cover;
-        transition: transform 0.3s ease, z-index 0.3s ease;
-        cursor: pointer;
-        overflow: hidden;
-      }
-      
-      .img1 { top: 420px; right: 5%; z-index: 5; }
-      .img2 { top: 320px; left: 30%; z-index: 4; }
-      .img3 { top: 280px; left: 50%; z-index: 3; }
-      .img4 { top: 230px; left: 50%; z-index: 2; }
-      .img5 { top: 280px; left: 75%; z-index: 1; }
-
-
-      @media (min-width: 1024px) {
-        .image {
-        width: 240px;   
-         height: 240px;
-      }
-      }
-
-      
-      .img1 {
-        top: 420px;
-        right: 2%;
-        z-index: 5;
-      }
-      .img2 {
-        top: 320px;
-        left: 30%;
-        z-index: 4;
-      }
-      .img3 {
-        top: 280px;
-        left: 50%;
-        z-index: 3;
-      }
-      .img4 {
-        top: 230px;
-        left: 50%;
-        z-index: 2;
-      }
-      .img5 {
-        top: 280px;
-        left: 65%;
-        z-index: 1;
-      }
-      
-      
-      .image:hover {
-        transform: scale(1.1);
-      }
-      
-      
-      .expanded {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(2);
-        z-index: 2000;
-      }
 
 /*test area*/
 .light {
