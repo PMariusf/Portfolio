@@ -4,6 +4,325 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+html, body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+body {
+  background: linear-gradient(247.28deg, #6b6969 37.32%, #999494 37.43%, rgba(216,216,216,0) 47.24%);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+.logo {
+  position: relative;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-image: url('/Bilder/PM.png'); /* Replace with your logo */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 50px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 2.5em;
+}
+.navbar li {
+  margin: 0;
+}
+.navbar a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color 0.3s;
+  padding: 0.5em;
+}
+.navbar a:hover {
+  color: rgb(85, 0, 255);
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 5px 0;
+}
+/* Responsive Navbar */
+@media (max-width: 668px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5em;
+    text-align: center;
+    background: rgba(164, 164, 164, 0.7);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .navbar ul.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* ---------- Under Navbar Light ---------- */
+.light-under-navbar {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.977);
+  z-index: -1;
+  animation: lightPulse 2s infinite;
+}
+@keyframes lightPulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* ---------- Polygon Overlay ---------- */
+.poly-overlay {
+  position: fixed;
+  top: calc(65px + 3px);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 65px - 3px);
+  z-index: -1;
+}
+.poly-overlay svg {
+  width: 100%;
+  height: 100%;
+}
+/* Adjust poly-overlay for small navbar if needed */
+@media (max-width: 768px) {
+  .poly-overlay {
+    top: calc(55px + 3px);
+    height: calc(100vh - 55px - 3px);
+  }
+}
+
+/* ---------- Social Icons Footer ---------- */
+footer#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  padding: 10px 0;
+  z-index: 1000;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+  text-align: center;
+}
+.icon-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 5px;
+}
+.icon-text {
+  margin-top: 5px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+/* Social Media Icons Base Style */
+#instagram,
+#linkedin,
+#twitch,
+#github,
+#facebook {
+  position: relative;
+  font-size: 8vw;
+  background-color: #4b4b4b;
+  color: #fff;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.5),
+              10px 1px 12px rgba(0,0,0,0.5),
+              2px 2px 10px rgba(0,0,0,0.5),
+              2px 2px 3px rgba(0,0,0,0.5),
+              inset 2px 2px 10px rgba(0,0,0,0.5);
+  border-radius: 29px;
+  padding: 9px 19px;
+  margin: 0 30px;
+  animation: animate 3s linear infinite;
+  text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+  transform: scale(1.1);
+}
+#instagram { animation-delay: 0.3s; background-color: #E4405F; }
+#linkedin  { animation-delay: 0.0s; background-color: #0077b5; }
+#twitch   { animation-delay: 0.5s; background-color: #6441A5; }
+#github   { animation-delay: 0.1s; background-color: #333; }
+#facebook { animation-delay: 0.7s; background-color: #1877F2; }
+
+@keyframes animate {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(360deg); }
+}
+
+/* Responsive Social Icons on Small Screens */
+@media screen and (max-width: 728px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+  }
+  #instagram,
+  #linkedin,
+  #twitch,
+  #github,
+  #facebook {
+    font-size: 6vw;
+    margin: 0 15px;
+  }
+}
+
+/* ---------- Glowing Shapes ---------- */
+.shapes-container {
+  display: flex;
+      flex-direction: row; /* Change to column if you want them stacked vertically */
+      gap: 20px;
+      text-align: center;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #00ffff; /* Cyan */
+  box-shadow: 0 0 15px 5px #00ffff, 0 0 30px 10px #00ffff;
+}
+/* Glowing Triangle */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 120px solid #ff00ff; /* Magenta */
+  box-shadow: 0 0 15px 5px #ff00ff, 0 0 30px 10px #ff00ff;
+}
+
+/* ---------- Floating Lights (Test Area) ---------- */
+.light {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(185, 183, 183);
+  box-shadow: 0 0 20px 2px #939898;
+  opacity: 0;
+  top: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  animation: floatUp 4s infinite linear;
+}
+.x1 { animation-duration: 4s; transform: translateX(-50%) scale(1.0); }
+.x2 { animation-duration: 7s; transform: translateX(-50%) scale(1.6); left: 15%; }
+.x3 { animation-duration: 2.5s; transform: translateX(-50%) scale(0.5); left: -15%; }
+.x4 { animation-duration: 4.5s; transform: translateX(-50%) scale(1.2); left: -34%; }
+.x5 { animation-duration: 8s; transform: translateX(-50%) scale(2.2); left: -57%; }
+.x6 { animation-duration: 3s; transform: translateX(-50%) scale(0.8); left: -81%; }
+.x7 { animation-duration: 5.3s; transform: translateX(-50%) scale(3.2); left: 37%; }
+.x8 { animation-duration: 4.7s; transform: translateX(-50%) scale(1.7); left: 62%; }
+.x9 { animation-duration: 4.1s; transform: translateX(-50%) scale(0.9); left: 85%; }
+@keyframes floatUp {
+  0% { top: 100vh; opacity: 0; }
+  25% { opacity: 1; }
+  50% { top: 0vh; opacity: 0.8; }
+  75% { opacity: 1; }
+  100% { top: -100vh; opacity: 0; }
+}
+
+/* ---------- Header Text Animation (Test) ---------- */
+.header {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  text-align: center;
+}
+@media only screen and (max-width: 280px) {
+  .header {
+    width: 100%;
+  }
+}
+#head1, #head2, #head3, #head4, #head5 { opacity: 0; }
+#head1 { animation: fadeOut 5s ease-in; }
+#head2 { animation: fadeOut 5s ease-in 6s; animation-delay: 6s; }
+#head3 { animation: fadeOut 5s ease-in 12s; animation-delay: 12s; }
+#head4 { animation: fadeOut 5s ease-in 17s; animation-delay: 17s; }
+#head5 { animation: finalFade 5s ease-in forwards; animation-delay: 22s; }
+
+@keyframes fadeOut {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  80% { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+@keyframes finalFade {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  80% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 body {
   background: linear-gradient(247.28deg, #6b6969 37.32%, #999494 37.43%, rgba(216, 216, 216, 0) 47.24%);
   background-size: cover;
@@ -13,7 +332,7 @@ body {
   align-items: center;
       justify-content: center;
   display: flex;
-  flex-direction: column;
+  
   overflow-x: hidden;
 
 }
@@ -45,15 +364,15 @@ body {
   color: white;
   text-decoration: none;
   padding: 10px 20px;
-  background-image: url('/Bilder/PM.png'); /* Replace with your logo */
+  background-image: url('/Bilder/PM.png'); 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center left;
-  padding-left: 50px; /* Adjust to move text away from logo */
+  padding-left: 50px; 
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
   
 }
-/* Nav Links */
+/* 
 
 
 .navbar ul {
@@ -95,7 +414,7 @@ body {
   margin: 5px 0;
 }
 
-/* Responsive Styles */
+/* 
 @media (max-width: 668px) {
   .navbar ul {
     display: none;
@@ -128,7 +447,7 @@ body {
   animation: lightPulse 2s infinite; 
 }
 
-/* Keyframe for pulsing light animation */
+/* 
 @keyframes lightPulse {
   0% {
     opacity: 0.6;
@@ -144,10 +463,10 @@ body {
 .poly-overlay {
   
     position: fixed;
-    top: calc(65px + 3px); /* Stays exactly 3px below the navbar */
+    top: calc(65px + 3px); 
     left: 0;
     width: 100%;
-    height: calc(100vh - 65px - 3px); /* Fills the remaining space */
+    height: calc(100vh - 65px - 3px); 
     z-index: -1;
   }
 
@@ -160,21 +479,21 @@ body {
 
 
 .poly-overlay {
-  top: calc(55px + 3px); /* Adjusted for smaller navbar */
-  height: calc(100vh - 55px - 3px); /* Stretches fully to bottom */
+  top: calc(55px + 3px); 
+  height: calc(100vh - 55px - 3px); 
 }
 
-/* 📱 Mobile Adjustments */
+/* 
 @media (max-width: 768px) {
   .poly-overlay {
-    top: calc(55px + 3px); /* Adjust based on smaller navbar height */
+    top: calc(55px + 3px); 
   bottom: 0;
   }
 }
 
 
 
-/* test area*/
+/* test area
 @media screen and (max-width: 600px) {
 .nav.responsive {position: relative;}
 .nav.responsive a.icon {
@@ -224,61 +543,61 @@ text-align: center;
 }
 .icon-text {
   position: absolute;
-  top: -25px; /* Adjusts text above the icon */
+  top: -25px; 
   color: white;
   font-size: 1.2em;
   font-weight: bold;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* Social Media Icons */
+/* 
 #instagram {
   font-size: 5vw;
-  background-color: #E4405F; /* Instagram Red-Pink */
+  background-color: #E4405F;
   color: white;
   text-shadow: 0 0 10px #ff5c8d, 0 0 20px #ff5c8d;
 }
 
 #linkedin {
   font-size: 5vw;
-  background-color: #0077b5; /* LinkedIn Blue */
+  background-color: #0077b5; 
   color: white;
   text-shadow: 0 0 10px #0099ff, 0 0 20px #0099ff;
 }
 
 #twitch {
   font-size: 5vw;
-  background-color: #6441A5; /* Twitch Purple */
+  background-color: #6441A5; 
   color: white;
   text-shadow: 0 0 10px #8d5cff, 0 0 20px #8d5cff;
 }
 
 #github {
   font-size: 5vw;
-  background-color: #333; /* GitHub Dark */
+  background-color: #333;
   color: white;
   text-shadow: 0 0 10px #999, 0 0 20px #999;
 }
 
 #facebook {
   font-size: 5vw;
-  background-color: #1877F2; /* Facebook Blue */
+  background-color: #1877F2; 
   color: white;
   text-shadow: 0 0 10px #4c8bf5, 0 0 20px #4c8bf5;
 }
 
-/* Hover Effect - Slight Glow */
+/* 
 #instagram:hover,
 #linkedin:hover,
 #twitch:hover,
 #github:hover,
 #facebook:hover {
   transform: scale(1.1);
-  filter: brightness(1.2); /* Increase brightness on hover */
+  filter: brightness(1.2); 
 }
 
 
-
+/*
 
   #instagram,
   #linkedin,
@@ -328,10 +647,10 @@ text-align: center;
   
   @media screen and (max-width: 728px) {
     .container {
-        flex-direction:row; /* Stack icons vertically */
-        align-items:flex-end; /* Keep them centered */
+        flex-direction:row; 
+        align-items:flex-end; 
         justify-content: center;
-        gap: 10px; /* Reduce spacing */
+        gap: 10px; 
     }
   }
   #instagram,
@@ -339,14 +658,13 @@ text-align: center;
   #twitch,
   #github,
   #facebook {
-    font-size: 6vw; /* Adjust this value to get your desired icon size on small screens */
+    font-size: 6vw; 
     margin: 0 15px;
   }
     .icon-wrapper {
-        margin: 2px 0; /* Reduce spacing between icons */
+        margin: 2px 0; 
     }
-        /*flex-direction: row; 
-        align-items: center;*/
+        
     
   
   @keyframes animate {
@@ -358,33 +676,33 @@ text-align: center;
     }
   }
 
-/*test*/
+/*test
 
 .container {
   text-align: center;
 }
-/* Glowing Square */
+/* 
 .square {
   width: 100px;
   height: 100px;
-  background-color: #00ffff; /* Cyan */
+  background-color: #00ffff;
   box-shadow: 0 0 15px 5px #00ffff, 0 0 30px 10px #00ffff;
   display: inline-block;
   margin: 20px;
 }
-/* Glowing Triangle */
+/* 
 .triangle {
   width: 0;
   height: 0;
   border-left: 60px solid transparent;
   border-right: 60px solid transparent;
-  border-bottom: 120px solid #ff00ff; /* Magenta */
+  border-bottom: 120px solid #ff00ff; 
   box-shadow: 0 0 15px 5px #ff00ff, 0 0 30px 10px #ff00ff;
   display: inline-block;
   margin: 20px;
 }
 
-/*Test*/
+/*Test*//*
       .light {
         position: absolute;
         width: 0px;
