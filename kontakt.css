@@ -225,27 +225,7 @@ footer#footer {
 }
 
 /* ---------- Glowing Shapes ---------- */
-.shapes-container {
-  display: flex;
-      flex-direction: row; /* Change to column if you want them stacked vertically */
-      gap: 20px;
-      text-align: center;
-}
-.square {
-  width: 100px;
-  height: 100px;
-  background-color: #00ffff; /* Cyan */
-  box-shadow: 0 0 15px 5px #00ffff, 0 0 30px 10px #00ffff;
-}
-/* Glowing Triangle */
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 120px solid #ff00ff; /* Magenta */
-  box-shadow: 0 0 15px 5px #ff00ff, 0 0 30px 10px #ff00ff;
-}
+
 
 /* ---------- Floating Lights (Test Area) ---------- */
 .light {
