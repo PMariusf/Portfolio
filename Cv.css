@@ -488,6 +488,7 @@ section:last-child {
   -webkit-animation-delay: 0, 2.5s;
   animation-delay: 0, 2.5s;
 }
+/*
  .navbar {
 display: flex;
   justify-content: space-between;
@@ -520,16 +521,16 @@ display: flex;
   color: white;
   text-decoration: none;
   padding: 10px 20px;
-  background-image: url('/Bilder/PM.png'); /* Replace with your logo */
+  background-image: url('/Bilder/PM.png'); 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center left;
-  padding-left: 50px; /* Adjust to move text away from logo */
+  padding-left: 50px; 
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
   
 }
 /* Nav Links */
-
+/*
 @media (max-width: 668px) {
   .navbar ul {
     display: none;
@@ -597,6 +598,7 @@ display: flex;
 }
 
 /* Responsive Styles */
+/*
 @media (max-width: 668px) {
   .navbar ul {
     display: none;
@@ -607,7 +609,7 @@ display: flex;
     width: auto;       
     height: auto;
     
-    /* Appearance & spacing */
+   
     background: transparent;
     background: rgba(164, 164, 164, 0.7);
     border: 2px solid #fff;

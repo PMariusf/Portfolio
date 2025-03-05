@@ -662,25 +662,6 @@ text-align: center;
   text-align: center;
 }
 /* 
-.square {
-  width: 100px;
-  height: 100px;
-  background-color: #00ffff;
-  box-shadow: 0 0 15px 5px #00ffff, 0 0 30px 10px #00ffff;
-  display: inline-block;
-  margin: 20px;
-}
-/* 
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 120px solid #ff00ff; 
-  box-shadow: 0 0 15px 5px #ff00ff, 0 0 30px 10px #ff00ff;
-  display: inline-block;
-  margin: 20px;
-}
 
 /*Test*//*
       .light {
