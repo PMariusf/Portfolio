@@ -227,8 +227,8 @@ alternativ option
 
 
 .poly-overlay {
-  top: calc(55px + 3px); /* Adjusted for smaller navbar */
-  height: calc(100vh - 55px - 3px); /* Stretches fully to bottom */
+  top: calc(55px + 3px); 
+  height: calc(100vh - 55px - 3px); 
 }
 
 /* 📱 Mobile Adjustments */
@@ -239,8 +239,6 @@ alternativ option
   }
 }
 
-
-
 .bottom-right-image {
   position: fixed;
   bottom: 50px;  
@@ -249,8 +247,6 @@ alternativ option
   height: auto;  
   z-index: 999;  
 }
-
-
 
 .photo-main {
   position: absolute;
@@ -266,21 +262,20 @@ alternativ option
 }
 
 
-@media (max-width: 280px) {
+@media (max-width: 760px) {
 .photo-main {
-  width: 120px;
-  height: 120px;
-  top: 22vh;
+  width: 140px;
+  height: 140px;
+  
 }
 }
-@media (min-width: 760px) {
+@media (min-width: 260px) {
   .photo-main {
-    width: 160px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
+    
   }
 }
-
-
 
 .header {
   position: absolute;
