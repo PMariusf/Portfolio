@@ -270,6 +270,8 @@ height: 1073px
   transition: transform 0.3s ease, z-index 0.3s ease;
   cursor: pointer;
 }
+/*test*/
+
 
 /* Stacking effect using absolute positioning */
 .img1 { top: 130px; left: -10px; z-index: 2; }
@@ -280,8 +282,12 @@ height: 1073px
 
 /* Hover effect for dynamic stacking */
 .stacked:hover {
-  transform: scale(1.1);
-  z-index: 5;
+  transform: scale(1.4);
+  
+  z-index: 10;
+}
+.stacked:not(:hover) {
+  transform: scale(1); /* Reset to default */
 }
 
 /* Responsive adjustments */
