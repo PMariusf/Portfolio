@@ -33,6 +33,25 @@ body {
   position: relative;
   transition: color 0.3s ease-in-out;
 }
+.navbar a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: rgb(104, 104, 104);
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+.navbar a:hover {
+  color: rgb(109, 109, 109);
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
 
 .navbar {
   display: flex;
