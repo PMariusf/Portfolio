@@ -23,67 +23,99 @@ main {
 }
 
 /* Navbar Styling */
+.navbar a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+.navbar a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: rgb(104, 104, 104);
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+.navbar a:hover {
+  color: rgb(109, 109, 109);
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
 .navbar {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  height: 80px;
+  flex-wrap: nowrap;
+  padding: 15px 15px;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(133, 133, 133, 0.3);
   backdrop-filter: blur(8px);
-}
+  }
 
-.logo, 
-.navbar ul, 
-.navbar a {
-  white-space: nowrap;
-}
+  .logo, 
+  .navbar ul, 
+  .navbar a {
+    white-space: nowrap;
+  }
+  .navbar a {
+    font-size: 1.2em;
+  }
 
 .logo {
   position: relative;
   font-size: 26px;
-  font-weight: bold;
+  font-weight: bold; 
+  text-transform: uppercase;
   color: white;
   text-decoration: none;
-  background-image: url('/Bilder/PM.png');
-  background-size: 60px;
+  padding: 10px 20px;
+  background-image: url('/Bilder/PM.png'); /* Replace with your logo */
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center left;
-  padding-left: 15px;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
-  line-height: 80px;
+  padding-left: 50px; /* Adjust to move text away from logo */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  
 }
+/* Nav Links */
 
-
-
-.polygon {
-  position: absolute;
-  top: calc(60px + 3px); /* Navbar height + 3px */
-  left: 0;
-  width: 100vw;
-  height: calc(100vh - 60px - 3px); /* Full page minus navbar */
-  background-color: #0088cc;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  z-index: -1;
-}
-
-/*.test area */
 @media (max-width: 668px) {
-  .navbar {
-    height: 80px;
-  }
-
-  .polygon {
-    top: calc(80px + 3px);
-    height: calc(100vh - 80px - 3px);
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 100%;               
+    right: 0;               
+    width: 100%;             
+    height: calc(100vh - 65px); 
+    background: transparent;
+    background: rgba(105, 104, 104, 0.7);
+    border: 2px solid #fff;  
+    border-radius: 5px;      
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-end;   
+    margin: 0;
+    padding: 0;
   }
 }
+
 .navbar ul {
   display: flex;
   align-items: center;
@@ -114,7 +146,7 @@ main {
 }
 
 .navbar a:hover {
-  color: rgb(85, 0, 255);
+  color: rgb(81, 0, 243);
 }
 
 .menu-toggle {
@@ -134,12 +166,29 @@ main {
 @media (max-width: 668px) {
   .navbar ul {
     display: none;
+    position: absolute;
+    top: 100%;        
+    right: 0;         
+    
+    width: auto;       
+    height: auto;
+    
+    /* Appearance & spacing */
+    background: transparent;
+    background: rgba(164, 164, 164, 0.7);
+    border: 2px solid #fff;
+    border-radius: 5px;
     flex-direction: column;
-    width: 100%;
-    gap: 1.5em;
-    text-align: center;
+    gap: 1em;          
+    margin: 0;
+    padding: 10px;     
+    text-align: right;
   }
 
+  .navbar ul li:last-child {
+    background: transparent;
+    margin-bottom: 20px; 
+  }
   .navbar ul.active {
     display: flex;
   }
@@ -150,6 +199,30 @@ main {
 }
 
 
+.light-under-navbar {
+  position: absolute;
+  top: 72px; 
+  left: 0;
+  width: 100%; 
+  height: 5px; 
+  background-color: rgba(255, 255, 255, 0.3); 
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.977); 
+  z-index: -1; 
+  animation: lightPulse 2s infinite; 
+}
+
+/* Keyframe for pulsing light animation */
+@keyframes lightPulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
 
 /* Content Sections */
 .content-section {
