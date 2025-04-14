@@ -299,7 +299,8 @@ main {
 @media (max-width: 1024px) {
   .image-container img,
   .hero-section .image-container img {
-    max-width: 200px;
+    max-width: 100px;
+    height: auto;
   }
 }
 
