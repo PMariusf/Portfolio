@@ -296,7 +296,7 @@ main {
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
+@media (max-width: 668px) {
   .image-container img,
   .hero-section .image-container img {
     max-width: 100px;
