@@ -1,6 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet"/>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="aboutme.css" />
+  <!-- Script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="index.html" class="logo">Om Meg</a>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="nav-links">
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="Cv.html">CV</a></li>
+      <li><a href="Prosjekter.html">Projects</a></li>
+      <li><a href="kontakt.html">Contact</a></li>
+    </ul>
+  </header>
+  <div class="light-under-navbar"></div>
+
+  <!-- Background Overlay (Animated) -->
+  <div class="animated-overlay"></div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="content-section hero-section">
+      <h1 class="headline">Me in a Nutshell</h1>
+      <div class="flex-container">
+        <div class="text-content">
+          <p>
+            A little about me: I like to draw, listen to music, and take pictures/videos to edit. 
+            I love going on hikes, biking, or just relaxing at home. I’m always ready to learn new things.
+          </p>
+        </div>
+        <div class="image-container">
+          <img src="/Bilder/aniz1.png" alt="Aniz Art" />
+          <img src="/Bilder/Deadpool.jpeg" alt="Deadpool Drawing" />
+          <img src="/Bilder/elisabeth1.jpeg" alt="Artwork" />
+          <img src="/Bilder/Supergirl.jpg" alt="Supergirl" />
+          <img src="Bilder/janethor.jpg" alt="Jane Thor" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Another Section -->
+    <section class="content-section">
+      <h2 class="section-title">Another Section</h2>
+      <div class="flex-container reverse">
+        <div class="text-content">
+          <p>I love to be creative and explore new things.</p>
+        </div>
+        <div class="image-container">
+          <img src="/Bilder/janethor.jpg" alt="Jane Thor" />
+          <img src="/Bilder/Viking2.jpeg" alt="Viking Drawing" /> 
+          <img src="Bilder/valentine.png" alt="Valentine Artwork" />
+          <img src="Bilder/Elisabeth.jpg" alt="Elisabeth Artwork" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section class="content-section">
+      <h2 class="section-title">Hobbies</h2>
+      <div class="flex-container">
+        <div class="text-content">
+          <p>
+            Drawing, photography, coding, and editing. 
+            Never give up on things you love!
+          </p>
+        </div>
+        <div class="image-container">
+          <img src="Bilder/belina.png" alt="Belina Drawing" />
+          <img src="Bilder/janethor.jpg" alt="Jane Thor" />
+          <img src="Bilder/Elise.jpg" alt="Elise Artwork" />
+          <img src="Bilder/shanobi.jpg" alt="Shanobi Logo" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Your Website. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
