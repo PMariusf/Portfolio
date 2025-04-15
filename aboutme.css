@@ -252,7 +252,7 @@ main {
   }
   .headline,
   .section-title {
-    text-shadow: 2px 2px 4px rgb(0, 0, 0, 0,8);
+    text-shadow: 4px 4px 4px rgb(0, 0, 0, 0,8);
   }
 
   /* TEXT CONTENT */
