@@ -173,7 +173,7 @@ main {
   text-align: center;
   letter-spacing: 2px;
   margin-bottom: 40px;
-  color: #fff;
+  color: #201d1d;
 }
 .section-title {
   font-size: 2rem;
@@ -249,7 +249,7 @@ main {
   /* HEADLINE */
   .headline {
     font-size: 2.5rem;
-    text-decoration-color: #242020;
+   
   }
   .headline,
   .section-title {
