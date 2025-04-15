@@ -53,7 +53,7 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center left;
-  padding-left: 10px; /* Adjust to move text away from logo */
+  padding-left: 20px; /* Adjust to move text away from logo */
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
   
 }
