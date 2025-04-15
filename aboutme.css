@@ -42,22 +42,21 @@ main {
 
 /* LOGO */
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
   position: relative;
-  /* Example: You can place a small icon or background image next to text
-  background-image: url('/Bilder/PM.png'); 
+  font-size: 26px;
+  font-weight: bold; 
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-image: url('/Bilder/PM.png'); /* Replace with your logo */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center left;
-  padding-left: 50px; 
-  */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  padding-left: 50px; /* Adjust to move text away from logo */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  
 }
-
 /* NAV LINKS */
 #nav-links {
   display: flex;
