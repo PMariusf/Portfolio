@@ -179,7 +179,7 @@ main {
     border: 2px solid #e2e2e2;
     border-radius: 5px;
     flex-direction: column;
-    gap: 1em;          
+    gap: 0.7em;          
     margin: 0;
     padding: 10px;     
     text-align: right;
