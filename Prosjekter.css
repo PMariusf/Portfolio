@@ -628,15 +628,21 @@ to{opacity: 1;}
   z-index: 2000;
 }
 
-/* Top and Bottom placement */
+.corner-squares .square {
+  position: fixed;
+  width: 8px; /* ↑ larger for visibility */
+  height: 8px;
+  background-color: red; /* ↑ bright color for testing */
+  z-index: 9999;
+}
+
+/* Positioning */
 .top { top: 20px; }
 .bottom { bottom: 20px; }
-
-/* Left and Right placement */
 .left { left: 20px; }
 .right { right: 20px; }
 
-/* Offsets — second square shifted slightly for visual variety */
+/* Offsets for second squares */
 .offset.top.left     { top: 40px; }
 .offset.top.right    { top: 40px; }
 .offset.bottom.left  { bottom: 40px; }
