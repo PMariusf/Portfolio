@@ -636,13 +636,23 @@ to{opacity: 1;}
   z-index: 9999;
 }
 
-/* Positioning */
+.corner-squares .square {
+  position: fixed;
+  width: 8px;               /* You can change this back to 2px later */
+  height: 8px;
+  background-color: red;    /* Bright color for visibility */
+  z-index: 9999;
+}
+
+/* Position to top/bottom */
 .top { top: 20px; }
 .bottom { bottom: 20px; }
+
+/* Position to left/right */
 .left { left: 20px; }
 .right { right: 20px; }
 
-/* Offsets for second squares */
+/* Offset squares – 2nd square per corner */
 .offset.top.left     { top: 40px; }
 .offset.top.right    { top: 40px; }
 .offset.bottom.left  { bottom: 40px; }
