@@ -744,6 +744,13 @@ to{opacity: 1;}
 80%{opacity: .9;}
 100%{opacity: 1;}
 }
+
+
+
+
+p {
+  line-height: 1.6;  /* nice spacing for most body text */
+}
 /*
 #footer{
 font-family: 'Roboto', sans-serif;
