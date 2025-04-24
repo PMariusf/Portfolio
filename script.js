@@ -68,3 +68,11 @@ document.addEventListener('click', function (e) {
       });
     });
 
+    document.addEventListener("DOMContentLoaded", function () {
+      const phoneLink = document.querySelector(".phone-popup");
+    
+      phoneLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        alert("Call us at +47 123 45 678\n\nOr tap and hold to copy the number.");
+      });
+    });
