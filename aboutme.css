@@ -168,7 +168,7 @@ main {
     display: none;
     position: absolute;
     top: 100%;        
-    right: 0;         
+    right: 10px;         
     
     width: auto;       
     height: auto;
