@@ -134,7 +134,7 @@ body {
     display: none;
     position: absolute;
     top: 100%;        
-    right: 0;         
+    right: 15px;         
     width: auto;       
     height: auto;
     /* Appearance & spacing */
