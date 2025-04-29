@@ -128,7 +128,7 @@ body {
   margin: 3px 0;
 }
 
-
+/*
 @media (max-width: 668px) {
   .navbar ul {
     display: none;
@@ -147,7 +147,7 @@ body {
     margin: 0;
     padding: 15px;     
     text-align: right;
-  }
+  }*/
 
   .navbar ul li:last-child {
     background: transparent;
