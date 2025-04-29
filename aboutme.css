@@ -146,23 +146,23 @@ main {
 }
 
 .navbar a:hover {
-  color: rgb(105, 105, 105);
+  color: rgb(122, 120, 124);
 }
 
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  
 }
 
 .menu-toggle div {
-  width: 25px;
+  width: 25px; 
   height: 4px;
   background-color: #ffffff;
   margin: 3px 0;
 }
 
-/* Responsive Styles */
 
 @media (max-width: 668px) {
   .navbar ul {
@@ -174,7 +174,7 @@ main {
     height: auto;
    
     background: transparent;
-    background: rgba(94, 93, 93, 0.7);
+    background: rgba(211, 210, 210, 0.7);
     border: 2px solid #fff;
     border-radius: 5px;
     flex-direction: column;
