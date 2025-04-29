@@ -142,8 +142,7 @@ main {
     top: 100%;        
     right: 15px;         
     width: auto;       
-    height: auto;
-   
+    height: calc(100vh - 65px); 
     background: transparent;
     background: rgba(58, 58, 58, 0.7);
     border: 2px solid #fff;
@@ -151,7 +150,7 @@ main {
     flex-direction: column;
     gap: 1.3em;          
     margin: 0;
-    padding: 15px;     
+    padding: 10px;     
     text-align: right;
   }
 
