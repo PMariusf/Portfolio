@@ -71,7 +71,7 @@ body {
     width: 100%;             
     height: calc(100vh - 65px); 
     background: transparent;
-    background: rgba(105, 104, 104, 0.7);
+    background: rgba(107, 107, 107, 0.7);
     border: 2px solid #fff;  
     border-radius: 5px;      
     flex-direction: column;
@@ -112,7 +112,7 @@ body {
 }
 
 .navbar a:hover {
-  color: rgb(81, 0, 243);
+  color: rgb(122, 120, 124);
 }
 
 .menu-toggle {
