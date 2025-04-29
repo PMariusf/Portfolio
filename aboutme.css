@@ -39,7 +39,7 @@ main {
   display: block;
   width: 0;
   height: 2px;
-  background-color: rgb(104, 104, 104);
+  background-color: rgb(68, 68, 68);
   position: absolute;
   bottom: -5px;
   left: 50%;
