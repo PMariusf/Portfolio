@@ -163,20 +163,19 @@ main {
 }
 
 /* Responsive Styles */
+
 @media (max-width: 668px) {
   .navbar ul {
     display: none;
     position: absolute;
     top: 100%;        
     right: 15px;         
-    
     width: auto;       
     height: auto;
-    
-    /* Appearance & spacing */
+   
     background: transparent;
-    background: rgba(61, 61, 61, 0.7);
-    border: 2px solid #e2e2e2;
+    background: rgba(211, 210, 210, 0.7);
+    border: 2px solid #fff;
     border-radius: 5px;
     flex-direction: column;
     gap: 1.3em;          
