@@ -119,6 +119,9 @@ body {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  width: 24px;
+  height: 18px;
+  padding: 4px;
 }
 
 .menu-toggle div {
@@ -357,7 +360,7 @@ body {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s, box-shadow 0.3;
+  transition: background-color 0.3s, box-shadow 0.3;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
