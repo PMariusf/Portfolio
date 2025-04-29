@@ -100,7 +100,7 @@ body {
 .navbar li {
   width: auto;
   text-align: right;
-  padding: 20px;
+  padding: 0.5em 1em;
 }
 
 .navbar a {
