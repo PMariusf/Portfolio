@@ -301,7 +301,7 @@ main {
   @media (max-width: 668px) {
     .image-container img,
     .hero-section .image-container img {
-      max-width: 140px;
+      max-width: 100px;
       height: auto;
       margin-bottom: 15px;
       border-radius: 8px;
