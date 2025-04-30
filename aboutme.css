@@ -298,6 +298,8 @@ main {
     flex-direction: column;
     text-align: center;
   }
+  }
+  
   @media (max-width: 668px) {
     .image-container img,
     .hero-section .image-container img {
