@@ -298,14 +298,28 @@ main {
     flex-direction: column;
     text-align: center;
   }
+  @media (max-width: 668px) {
+    .image-container img,
+    .hero-section .image-container img {
+      max-width: 140px;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
 
   .image-container {
     justify-content: center;
+    /*test*/
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
   .image-container img,
   .hero-section .image-container img {
     max-width: 80%;
+  }
+  .text-content {
+    padding: 0 10px;
   }
 }
 @media (max-width: 480px) {
