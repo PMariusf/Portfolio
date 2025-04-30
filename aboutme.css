@@ -306,6 +306,15 @@ main {
     max-width: 80%;
   }
 }
+@media (max-width: 480px) {
+  .content-section {
+    padding: 20px 15px;
+  }
+  .image-container img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
 
 /* Footer Styling */
 footer {
